@@ -138,12 +138,13 @@ h1{
 /* Sub Heading */
 
 h2{
-    font-size:22px;
-    color:#ffe600;
-    font-weight:700;
-    letter-spacing:2px;
-    margin-bottom:18px;
-    text-shadow:0 0 10px rgba(255,230,0,.6);
+    font-size:34px;
+    font-weight:800;
+    color:#ffffff;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+    text-shadow:0 0 12px rgba(0,212,255,.5);
 }
 
 /* Divider */
@@ -195,14 +196,12 @@ h2{
 
 .bluetooth{
     margin:15px 0;
-    font-size:32px;
+    font-size:30px;
     font-weight:800;
-    color:#00ff99;
+    color:#7dd3fc;
     text-shadow:
-        0 0 8px #00ff99,
-        0 0 18px #00ff99,
-        0 0 30px #00ff99;
-    animation:glow 1.2s infinite alternate;
+        0 0 8px rgba(125,211,252,.35);
+    animation:none;
 }
 
 @keyframes glow{

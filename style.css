@@ -368,3 +368,11 @@ h5{
     opacity:.8;
     letter-spacing:1px;
 }
+.title{
+    font-size:38px;
+    font-weight:900;
+    color:#ffffff;
+    text-align:center;
+    letter-spacing:2px;
+    margin:20px 0;
+}

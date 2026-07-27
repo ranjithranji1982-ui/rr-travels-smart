@@ -1,69 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RR Travels</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="card">
+
+<div class="music">🎵</div>
+
+<h1>RR TRAVELS</h1>
+
+<h2>CONNECT & PLAY</h2>
+
+<div class="line"></div>
+
+<div class="box">
+
+<h3>📱 How to Connect</h3>
+
+<p>1️⃣ Turn ON Bluetooth</p>
+
+<p>2️⃣ Connect to</p>
+
+<h4 class="bluetooth">RR TRAVELS</h4>
+
+<p>3️⃣ Enjoy Your Favorite Music 🎶</p>
+
+</div>
+
+<div class="box">
+
+<h3>🚖 Available In This Car</h3>
+
+<p>💧 Complimentary Water</p>
+
+<p>📱 USB Charging</p>
+
+<p>🧴 Hand Sanitizer</p>
+
+<p>🛡️ Safe & Comfortable Journey</p>
+
+</div>
+
+<div class="line"></div>
+
+<h5>
+
+❤️ Thank You For Choosing RR Travels ❤️
+
+</h5>
+
+</div>
+
+</body>
+
+</html>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:#0d0d0d;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    padding:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+overflow:hidden;
+background:linear-gradient(-45deg,
+#ff0066,
+#ff9900,
+#ffee00,
+#00d4ff,
+#00ff99,
+#8a2be2);
+background-size:500% 500%;
+animation:bgMove 12s ease infinite;
+padding:20px;
+}
+
+@keyframes bgMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
 }
 
 .card{
-    width:100%;
-    max-width:420px;
-    background:#1a1a1a;
-    border:3px solid gold;
-    border-radius:20px;
-    padding:25px;
-    text-align:center;
-    box-shadow:0 0 25px rgba(255,215,0,.3);
+
+width:100%;
+max-width:420px;
+
+padding:28px;
+
+border-radius:28px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
+
+border:2px solid rgba(255,255,255,.30);
+
+box-shadow:0 10px 40px rgba(0,0,0,.35);
+
+text-align:center;
+
+animation:cardUp 1s;
+
+}
+
+@keyframes cardUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.music{
+
+font-size:55px;
+
+animation:music 2s infinite;
+
+}
+
+@keyframes music{
+
+0%{transform:translateY(0);}
+
+50%{transform:translateY(-8px);}
+
+100%{transform:translateY(0);}
+
 }
 
 h1{
-    color:gold;
-    font-size:32px;
-    margin-bottom:10px;
+
+font-size:38px;
+
+font-weight:700;
+
+margin-top:10px;
+
+background:linear-gradient(90deg,
+#ffffff,
+#ffee00,
+#00ffff,
+#ff00ff);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
 }
 
 h2{
-    color:white;
-    margin-bottom:20px;
+
+color:#fff;
+
+margin-top:10px;
+
+letter-spacing:2px;
+    .line{
+width:80%;
+height:2px;
+margin:20px auto;
+background:linear-gradient(to right,#00ffff,#ffffff,#ff00ff);
+border-radius:50px;
 }
 
 .box{
-    background:#2b2b2b;
-    border-radius:15px;
-    padding:20px;
-    margin-bottom:20px;
+
+margin-top:20px;
+
+padding:18px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,.10);
+
+border:1px solid rgba(255,255,255,.20);
+
+transition:.4s;
+
+}
+
+.box:hover{
+
+transform:scale(1.03);
+
+background:rgba(255,255,255,.18);
+
 }
 
 .box h3{
-    color:gold;
-    margin-bottom:15px;
+
+color:#fff;
+
+font-size:22px;
+
+margin-bottom:15px;
+
 }
 
 .box p{
-    color:white;
-    font-size:18px;
-    margin:10px 0;
+
+color:#fff;
+
+font-size:18px;
+
+margin:12px 0;
+
 }
 
 .bluetooth{
-    color:#00ff99;
-    font-size:30px;
-    font-weight:bold;
-    margin:15px 0;
+
+margin-top:15px;
+
+margin-bottom:15px;
+
+font-size:32px;
+
+font-weight:bold;
+
+color:#00ff99;
+
+text-shadow:
+
+0 0 10px #00ff99,
+
+0 0 20px #00ff99,
+
+0 0 35px #00ff99;
+
+animation:glow 1.2s infinite alternate;
+
 }
 
-.thanks{
-    color:gold;
-    font-size:18px;
-    margin-top:20px;
-    font-weight:bold;
+@keyframes glow{
+
+from{
+
+transform:scale(1);
+
 }
+
+to{
+
+transform:scale(1.08);
+
+}
+
+}
+
+h5{
+
+margin-top:25px;
+
+font-size:20px;
+
+color:#fff;
+
+line-height:30px;
+
+text-shadow:0 0 10px #ff66cc;
+
+}
+
+@media(max-width:480px){
+
+.card{
+
+padding:22px;
+
+}
+
+h1{
+
+font-size:30px;
+
+}
+
+h2{
+
+font-size:22px;
+
+}
+
+.bluetooth{
+
+font-size:26px;
+
+}
+
+.box h3{
+
+font-size:20px;
+
+}
+
+.box p{
+
+font-size:16px;
+
+}
+
+h5{
+
+font-size:17px;
+
+}
+
+    }
+    
+
+}
+/* ===========================
+   FLOATING ANIMATION
+=========================== */
+
+body::before,
+body::after{
+content:'';
+position:fixed;
+width:250px;
+height:250px;
+border-radius:50%;
+filter:blur(80px);
+z-index:-1;
+animation:float 8s ease-in-out infinite;
+}
+
+body::before{
+background:#00e5ff;
+top:-80px;
+left:-80px;
+}
+
+body::after{
+background:#ff00aa;
+bottom:-80px;
+right:-80px;
+animation-delay:4s;
+}
+
+@keyframes float{
+
+0%{
+transform:translate(0,0) scale(1);
+}
+
+50%{
+transform:translate(40px,40px) scale(1.2);
+}
+
+100%{
+transform:translate(0,0) scale(1);
+}
+
+}
+
+/* ===========================
+   CARD GLOW
+=========================== */
+
+.card:hover{
+
+box-shadow:
+0 0 25px rgba(255,255,255,.4),
+0 0 60px rgba(0,229,255,.5),
+0 0 90px rgba(255,0,170,.4);
+
+transform:translateY(-5px);
+
+transition:.4s;
+
+}
+
+/* ===========================
+   MUSIC ICON GLOW
+=========================== */
+
+.music{
+
+filter:drop-shadow(0 0 10px yellow);
+
+}
+
+/* ===========================
+   BOX ICON ANIMATION
+=========================== */
+
+.box p{
+
+transition:.3s;
+
+}
+
+.box p:hover{
+
+transform:translateX(8px);
+
+color:#ffee00;
+
+}
+
+/* ===========================
+   THANK YOU ANIMATION
+=========================== */
+
+h5{
+
+animation:blink 3s infinite;
+
+}
+
+@keyframes blink{
+
+0%{
+opacity:1;
+}
+
+50%{
+opacity:.6;
+}
+
+100%{
+opacity:1;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+}
+
+.footer{
+
+margin-top:20px;
+
+font-size:13px;
+
+color:white;
+
+opacity:.7;
+
+letter-spacing:1px;
+
+}
+/* ===================================
+   PREMIUM ANIMATIONS
+=================================== */
+
+/* Rainbow Border */
+.card{
+    position:relative;
+    overflow:hidden;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    inset:-3px;
+    background:linear-gradient(
+        45deg,
+        #ff0080,
+        #ff8c00,
+        #ffee00,
+        #00ff99,
+        #00e5ff,
+        #7b2cff,
+        #ff0080
+    );
+    background-size:400%;
+    z-index:-2;
+    animation:borderMove 8s linear infinite;
+    border-radius:30px;
+}
+
+.card::after{
+    content:"";
+    position:absolute;
+    inset:3px;
+    background:rgba(20,20,20,.82);
+    backdrop-filter:blur(20px);
+    border-radius:26px;
+    z-index:-1;
+}
+
+@keyframes borderMove{
+    0%{background-position:0%;}
+    100%{background-position:400%;}
+}
+
+/* Floating Music Notes */
+
+.music::after{
+    content:"♪ ♫";
+    position:absolute;
+    font-size:22px;
+    color:white;
+    left:55%;
+    top:-8px;
+    animation:notes 3s infinite;
+}
+
+@keyframes notes{
+
+0%{
+opacity:0;
+transform:translateY(0);
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+opacity:0;
+transform:translateY(-30px);
+}
+
+}
+
+/* Bluetooth Glow */
+
+.bluetooth{
+
+background:linear-gradient(
+90deg,
+#00ff99,
+#00ffff,
+#ffee00);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
+
+/* Button Effect */
+
+.box{
+
+cursor:pointer;
+
+}
+
+.box:active{
+
+transform:scale(.97);
+
+}
+
+/* Smooth Scroll */
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+/* Glass Shine */
+
+.card:hover{
+
+box-shadow:
+0 0 20px #00e5ff,
+0 0 40px #ff00ff,
+0 0 60px #ffee00;
+
+}
+
+/* Water Animation */
+
+.box p{
+
+transition:.4s;
+
+}
+
+.box p:hover{
+
+letter-spacing:1px;
+
+}
+
+/* RR Title Glow */
+
+h1{
+
+text-shadow:
+0 0 15px rgba(255,255,255,.5);
+
+}
+
+/* Mobile */
+
+@media(max-width:480px){
+
+.card{
+
+width:95%;
+
+}
+
+}
+
